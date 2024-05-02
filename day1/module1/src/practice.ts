@@ -5,12 +5,12 @@
  * boolean
  * array
  * tuple
+ * object --> lateral type, readonly property
  * union
  * null
  * undefined
  * unknown
  * never
- * object
  */
 {
   const myName: string = "samiha";
