@@ -15,8 +15,7 @@
   //   object destructuring
   const {
     contactNo: phoneInfo, // aliasing
-    // aliasing
-    name: { middleName: midName },
+    name: { middleName: midName }, // aliasing
   } = user;
   console.log(phoneInfo, name);
 
