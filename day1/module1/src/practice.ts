@@ -7,6 +7,7 @@
  * tuple
  * functions --> normal function, array function, default parameter value, annonymous funtion
  * object --> lateral type, readonly property, method (object function)
+ * spread operator for array and object
  * union
  * null
  * undefined
