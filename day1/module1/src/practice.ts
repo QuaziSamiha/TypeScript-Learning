@@ -3,13 +3,13 @@
  * string
  * number
  * boolean
+ * array
  * tuple
  * union
  * null
  * undefined
  * unknown
  * never
- * array
  * object
  */
 {
@@ -23,40 +23,48 @@
   isJobless = false;
   console.log({ isJobless });
 
-  const myObj : {
+  const myObj: {
     name: string;
     roll: number;
     isStudent: boolean;
   } = {
-    name: 'samiha',
+    name: "samiha",
     roll: 155,
-    isStudent: false
-  }
-  console.log(myObj)
+    isStudent: false,
+  };
+  console.log(myObj);
 
   type Student = {
-    institute: 'RUET'
+    institute: "RUET";
     name: string;
     roll: number;
-    isStudent ?: boolean
-  }
+    isStudent?: boolean;
+  };
 
-  const myObj2 : Student ={
-    institute: 'RUET',
-    name: 'samiha',
+  const myObj2: Student = {
+    institute: "RUET",
+    name: "samiha",
     roll: 566,
+  };
+  console.log(myObj2);
+
+  const { institute: education, name: newName } = myObj2;
+  console.log(education, newName);
+
+  function sum(n1: number, n2: number): number {
+    return n1 + n2;
   }
-  console.log(myObj2)
 
-  const {institute : education, name : newName, } = myObj2;
-  console.log(education, newName)
+  console.log(sum(12, 36));
 
-  function sum(n1: number, n2 : number) : number {
-    return n1+n2;
-  }
+  const add = (n: number): number => n * n;
+  console.log(add(5));
 
-  console.log(sum(12, 36))
+  let jama: string[] = ["haki", "paki", "faki"];
+  console.log(jama);
+  jama.push("hunter");
+  console.log(jama);
 
-  const add = (n:number) : number => n*n;
-  console.log(add(5))
+  let studentInfo : [string, number, string, boolean] = ['samiha', 155, 'rajshahi', false]
+  console.log(studentInfo)
 }

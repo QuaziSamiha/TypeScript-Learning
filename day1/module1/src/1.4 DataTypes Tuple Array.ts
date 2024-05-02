@@ -10,7 +10,7 @@ let x: undefined = undefined;
 // null
 let y: null = null;
 
-// if you not defined, then compile will define it as any type
+// if you not defined, then compiler will define it as "any" type
 let d; // not recommended
 d = 155;
 d = "pochu";
