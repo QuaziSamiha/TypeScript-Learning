@@ -82,51 +82,10 @@
   ];
   console.log(studentInfo);
 
-  //   const isAuthenticatd = undefined;
-  /*
-   * output:
-   * { result1: 'Guest' }
-   * { result2: 'Guest' }
-   */
-  const isAuthenticatd = ""; // falsy value
-  /**
-   * output:
-   * { result1: '' }
-   * { result2: 'Guest' }
-   */
-  const result1 = isAuthenticatd ?? "Guest";
-  console.log({ result1 });
-  const result2 = isAuthenticatd ? isAuthenticatd : "Guest";
-  console.log({ result2 });
-
-  type User = {
-    name: string;
-    address: {
-      city: string;
-      roadNo: number;
-      roadName: string;
-      permanentAddress?: string;
+  //   never type
+  //   it will never return any kind of type
+    const throwError = (msg: string): never => {
+      throw new Error(msg); // but returning string
     };
-  };
-
-  const user: User = {
-    name: "Persian",
-    address: {
-      city: "Rajshahi",
-      roadNo: 3,
-      roadName: "Upashahar",
-    },
-  };
-
-  // without optional chaining
-  const permanentAddress = user.address.permanentAddress;
-  console.log({ permanentAddress });
-  // with optional chaining -- a good practice
-  const permanentAddress3 = user?.address?.permanentAddress;
-  console.log({ permanentAddress3 });
-
-  //   using optional chaining and nullishing coalescing
-  const permanentAddress2 =
-    user?.address?.permanentAddress ?? "No Permanent Address";
-  console.log({ permanentAddress2 });
+    throwError("muskil se error hogaya");
 }
