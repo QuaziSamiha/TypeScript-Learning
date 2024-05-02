@@ -13,7 +13,7 @@
  * ...rest
  * aliasing
  * type alias
- * union
+ * union types
  * null
  * undefined
  * unknown
