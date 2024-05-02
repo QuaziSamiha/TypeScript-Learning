@@ -14,7 +14,7 @@
 
   const fullstackDeveloper: FullStackDeveloper = {
     skills: ["HTML", "CSS", "express"],
-    designation1: "Frontend Developer",
-    designation2: "Backend Developer",
+    designation1: "Frontend Developer", // must
+    designation2: "Backend Developer", // must
   };
 }
