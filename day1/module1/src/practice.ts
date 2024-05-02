@@ -12,6 +12,7 @@
  * destructuring object & array
  * ...rest
  * aliasing
+ * type alias
  * union
  * null
  * undefined
