@@ -1,4 +1,3 @@
-
 /**
  * string
  * number
@@ -14,6 +13,9 @@
  * aliasing
  * type alias
  * union types
+ * optional chainging operator
+ * nullish coalescing operator
+ * ternary operator
  * null
  * undefined
  * unknown
@@ -72,6 +74,59 @@
   jama.push("hunter");
   console.log(jama);
 
-  let studentInfo : [string, number, string, boolean] = ['samiha', 155, 'rajshahi', false]
-  console.log(studentInfo)
+  let studentInfo: [string, number, string, boolean] = [
+    "samiha",
+    155,
+    "rajshahi",
+    false,
+  ];
+  console.log(studentInfo);
+
+  //   const isAuthenticatd = undefined;
+  /*
+   * output:
+   * { result1: 'Guest' }
+   * { result2: 'Guest' }
+   */
+  const isAuthenticatd = ""; // falsy value
+  /**
+   * output:
+   * { result1: '' }
+   * { result2: 'Guest' }
+   */
+  const result1 = isAuthenticatd ?? "Guest";
+  console.log({ result1 });
+  const result2 = isAuthenticatd ? isAuthenticatd : "Guest";
+  console.log({ result2 });
+
+  type User = {
+    name: string;
+    address: {
+      city: string;
+      roadNo: number;
+      roadName: string;
+      permanentAddress?: string;
+    };
+  };
+
+  const user: User = {
+    name: "Persian",
+    address: {
+      city: "Rajshahi",
+      roadNo: 3,
+      roadName: "Upashahar",
+    },
+  };
+
+  // without optional chaining
+  const permanentAddress = user.address.permanentAddress;
+  console.log({ permanentAddress });
+  // with optional chaining -- a good practice
+  const permanentAddress3 = user?.address?.permanentAddress;
+  console.log({ permanentAddress3 });
+
+  //   using optional chaining and nullishing coalescing
+  const permanentAddress2 =
+    user?.address?.permanentAddress ?? "No Permanent Address";
+  console.log({ permanentAddress2 });
 }
