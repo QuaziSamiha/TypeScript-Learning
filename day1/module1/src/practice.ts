@@ -1,11 +1,12 @@
-// types of ts
+
 /**
  * string
  * number
  * boolean
  * array
  * tuple
- * object --> lateral type, readonly property
+ * functions --> normal function, array function, default parameter value, annonymous funtion
+ * object --> lateral type, readonly property, method (object function)
  * union
  * null
  * undefined
