@@ -22,10 +22,10 @@
     email: "x@gmail.com",
     devType: "NLWD",
   });
-  
+
   const student2 = addCourseToStudent({
     name: "Mr Y",
     email: "y@gmail.com",
-    devType: "NLWD",
+    hasWatch: "Apple Watch",
   });
 }
