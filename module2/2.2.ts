@@ -1,4 +1,5 @@
 {
+  // 2 May, 2024
   // type alias
   type User1 = {
     name: string;

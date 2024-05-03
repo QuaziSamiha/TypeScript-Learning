@@ -1,4 +1,5 @@
 {
+  // 2 May, 2024
   // type assertion
   /*
    * Sometimes TypeScript Might Be Unsure Of A Variable's
