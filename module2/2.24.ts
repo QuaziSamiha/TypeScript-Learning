@@ -16,9 +16,14 @@
 
   type Height = AreaNumber["height"]; // look up type
 
-  type AreaString = {
-    // [key in "height" | "width"]: string;
-    [key in keyof AreaNumber]: string;
-    // [key in keyof AreaNumber]: boolean;
+  //   T => { height: string; width: number }
+  type AreaString<T> = {
+    // [key in keyof T]: boolean;
+    [key in keyof T]: T[key];
+  };
+
+  const area1: AreaString<{ height: string; width: number }> = {
+    height: "100",
+    width: 50,
   };
 }
