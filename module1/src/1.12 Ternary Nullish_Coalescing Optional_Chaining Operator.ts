@@ -32,7 +32,8 @@
   // with nullish coalesing operator
   const result1 = isAuthenticatd ?? "Guest";
   console.log({ result1 });
-  // without nullish coalesing operator, using ternary operator
+  // without nullish coalesing operator 
+  // using ternary operator
   const result2 = isAuthenticatd ? isAuthenticatd : "Guest";
   console.log({ result2 });
 

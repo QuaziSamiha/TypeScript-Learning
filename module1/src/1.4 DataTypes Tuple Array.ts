@@ -25,6 +25,7 @@
   console.log(rollList);
 
   // tuple --> special kind of array --> order --> type of values
+  // order of different types
   let coordinates: [number, number] = [1, 5];
   let ageName: [number, string] = [50, "Sam"];
   // ageName[0] = 'Tasnim' // will show an error

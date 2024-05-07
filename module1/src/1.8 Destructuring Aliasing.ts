@@ -6,7 +6,7 @@
     name: {
       firstName: "Quazi",
       middleName: "Samiha",
-      lastName: "Tasnime",
+      lastName: "Tasnim",
     },
     contactNo: "01304396222",
     address: "Uganda",

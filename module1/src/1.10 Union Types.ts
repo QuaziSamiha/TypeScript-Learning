@@ -1,4 +1,5 @@
 {
+  // Union -- type alias and literal type
   // union types
   type FrontendDeveloper = "fakibajDeveloper" | "juniorDeveloper";
   type FullStackDeveloper = "frontendDeveloper" | "expertDeveloper";
@@ -12,8 +13,8 @@
 
   type User = {
     name: string;
-    email?: string;
-    gender: "male" | "female";
+    email?: string; // optional chaining
+    gender: "male" | "female"; // union
     bloodGroup: "O+" | "A+" | "B+";
   };
 

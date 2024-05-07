@@ -1,4 +1,5 @@
 {
+  // 06.05.24
   // access modifiers
   class BankAccount {
     public readonly id: number;
@@ -10,13 +11,21 @@
       this._balance = balance;
     }
 
-    public addDeposit(amount: number) {
+    set deposit(amount: number) {
       this._balance = this._balance + amount;
     }
 
-    public getBalance() {
+    //   public addDeposit(amount: number) {
+    //     this._balance = this._balance + amount;
+    //   }
+
+    // getter
+    get Balance() {
       return this._balance;
     }
+    // public getBalance() {
+    //   return this._balance;
+    // }
   }
 
   class StudentAccount extends BankAccount {
@@ -26,8 +35,10 @@
   }
 
   const poorAccount = new BankAccount(111, "Samu", 20);
-  poorAccount.addDeposit(0);
-  const myBalance = poorAccount.getBalance();
+  // poorAccount.addDeposit(20);
+  poorAccount.deposit = 50;
+  //   const myBalance = poorAccount.getBalance();
+  const myBalance = poorAccount.Balance; // calling function like a property
   console.log(myBalance);
   //
 }

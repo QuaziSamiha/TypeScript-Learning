@@ -48,7 +48,7 @@
 
   const user4: {
     // adding readonly property
-    readonly company: string; // literal type -- a value is behaving like type
+    readonly company: string;
     firstName: string;
     middleName?: string; // this ? indicates middle name is optional
     lastName: string;
