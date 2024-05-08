@@ -1,234 +1,121 @@
-# React Developer Roadmap (2024)
+# batch-3-assignment-1-QuaziSamiha
 
-A thorough React developer roadmap for 2024 that addresses all aspects of React and beyond.
+# Assignment: Basic Problem Solving with TypeScript
+This assignment comprises various problems that demonstrate fundamental TypeScript concepts, including data typing, interfaces for objects, class usage with inheritance, type checking, and manipulation of data structures. The solutions aim to showcase efficient and clear problem-solving techniques using TypeScript, adhering to best coding practices.
 
-<details>
+The assignment tasks cover a range of topics:
 
-<summary>0. Before you start React</summary>
+* String Manipulation: Implementing functions to repeat strings and reverse arrays.
+* Array Operations: Finding the largest number in an array and filtering even numbers.
+* Object Handling: Defining interfaces for student and book objects and performing operations like calculating average * grades and checking recent book publications.
+* Type Guard and Error Handling: Creating a function to log strings and handle different data types using type guards.
+* Class Implementation: Designing a class to represent car information and displaying relevant details.
+Each problem is accompanied by sample input and output, showcasing how TypeScript can be used to solve practical programming challenges effectively.If you have any questions or need further clarification on any problem, please let us know in our facebook group.
 
-You should know and be comfortable with **all of the following:**
+# Problem 1:
+Design a TypeScript function repeatString that takes two parameters: a string and a number. The function should return a new string that repeats the input string the specified number of times.
 
--   [**Basic HTML**](https://www.w3schools.com/html/default.asp)
+// Sample Input: 
+repeatString("Hello!", 3)
 
-    -   HTML Elements, Attributes, Headings, Paragraphs, Colors & Styles
-    -   HTML Links, Images, Tables, Lists, Block & Inline, Div, Classes, Id
-    -   HTML Forms
-    -   HTML Layout, Responsiveness & Semantic
+// Sample Output:
+"Hello!Hello!Hello!"
 
--   [**Basic CSS**](https://www.w3schools.com/css/default.asp)
+# Problem 2:
+Design a TypeScript function findLargestNumber that takes an array of numbers and returns the largest number in the array.
 
-    -   CSS Basics - Syntax, Selectors, Colors, Backgrounds, Borders, Margin, Padding, Height/Width, Box Model, Outline, Text, Fonts, Links etc.
-    -   CSS More - Lists, Tables, Display, Position, z-index, Overflow, Float, Inline Block, Align, Combinators, Pseudo-classes & elements, Opacity etc.
-    -   CSS Forms & Layouts
-    -   CSS Flexbox
-    -   CSS Grid
-    -   Advanced CSS - CSS Units, Shadows, Gradients, Transitions, Animations, Specificity etc.
+// Sample Input:
+findLargestNumber([10, 5, 8, 20, 3])
 
--   [**Basic Tailwind CSS**](https://www.youtube.com/watch?v=X7XbjwD6fVY&list=PLHiZ4m8vCp9P23SqlHL0QAqiwS_oCofV2)
+// Sample Output:
+20
 
-    -   Tailwind Utilities
-    -   Responsive Variants
-    -   Hover, focus and other states
-    -   Dark Mode variant
-    -   Tailwind Directives
-    -   Tailwind Configurations
-    -   Theme Configurations
-    -   [Tailwind cn() utility](https://www.youtube.com/watch?v=y7DrXkGj7AU)
+# Problem 3:
+Create a TypeScript function filterEvenNumbers that takes an array of numbers and returns a new array containing only the even numbers from the original array.
 
--   **Document Object Model (DOM)**
+// Sample Input:
+filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
-    -   [DOM Basics - Basics, Method, Document, Elements, Forms, CSS, Events, Navigation, Nodes and Collections](https://www.youtube.com/watch?v=mPTkKnL2aNA&list=PLHiZ4m8vCp9OkrURufHpGUUTBjJhO9Ghy)
-    -   [DOM Advanced](https://www.youtube.com/watch?v=XY96d0vEdFk&list=PLHiZ4m8vCp9MJDxMOzhYVuTrO1b5n-Tq_)
+// Sample Output:
+[2, 4, 6]
+# Problem 4:
+Design a TypeScript function reverseArray that takes an array of any type and returns a new array with its elements reversed. Use generics to define types.
 
--   [**Basic JavaScript**](https://www.youtube.com/watch?v=rePN-VFo1Eo&list=PLHiZ4m8vCp9OkrURufHpGUUTBjJhO9Ghy)
+// Sample Input 1:
+reverseArray(["apple", "banana", "cherry"])
 
-    -   JS Basics - Statements, Expressions, Syntax, Variables, Operators, Data Types, Functions, Objects, Arrays, Events, Array and String Methods, Object Methods, Date, Conditionals, Error Handling, JavaScript OOP - classes and inheritance and Debugging
-    -   JS Web APIs - Forms, History, Geolocation, Storage, Worker and Fetch API
-    -   JS JSON
+// Sample Output 1:
+["cherry", "banana", "apple"]
 
--   [**JavaScript Advanced**](https://www.youtube.com/watch?v=KuhLGuNxF8U&list=PLHiZ4m8vCp9Nflbo9a0pZuLscG_Xc7DKq)
+// Sample Input 2:
+reverseArray([10, 20, 30])
 
-    -   Solid JS Concepts - Scope, Hosting, Execution Context, Closures, Prototype, Recursion, Primitive vs Reference Data Types, Currying, Intersection Observer, Memoization, Event Propagation, Debounce etc.
-    -   [Asynchronous JavaScript](https://www.youtube.com/watch?v=IUBd76UQb34) - Callbacks, Promises and async-await
+// Sample Output 2: 
+[30, 20, 10]
 
--   [**Modern JavaScript**](https://www.youtube.com/watch?v=PWXkYBmlbB4&list=PLHiZ4m8vCp9MFjMRp9EEHWKArbi0wdgXG)
+# Problem 5:
+You are given an object called “student” representing a student's information with the following properties: name (string), age (number), and grades (array of numbers). Make an interface using given properties. Write a TypeScript function called calculateAverageGrade that takes this student object as input and calculates the average grade.
 
-    -   Different ES6+ JS Syntaxes and concepts eg. Arrow function, Truthy/Falsy values, Ternary Operator, Different Array methods like find, filter, map, reduce, slice, splice, push, pop, concat, different looping strategies, Spread & Rest Operator, Array and Object Destructuring, Imports/Exports syntax, Template Literals, Sorting etc.
+Hints: Use a reduce() method to sum the grades. average = total grades/ total length
 
--   [**Git/GitHub**](https://www.youtube.com/watch?v=PWXkYBmlbB4&list=PLHiZ4m8vCp9MFjMRp9EEHWKArbi0wdgXG)
+// Sample Input:
+const student1: Student = {     
+			    name: "Bob",     
+			    age: 17,     
+			    grades: [75, 80, 82, 88, 90]
+                       };
 
-    -   [Basics of Git](https://www.youtube.com/watch?v=oe21Nlq8GS4)
-    -   [Important Git Commands](https://learnwithsumit.com/rnext/courses/rnext/git-github-refresher)
 
-</details>
+const averageGradeForBob = calculateAverageGrade(student1);
 
-<details>
-<summary>1. React Fundamentals</summary>
+// Sample Output:
+83
 
-You should know and be comfortable with **all of the following:**
+# Problem 6:
+You are given an object representing a book with properties title (string), author (string), and publishedYear (number). Use type alias for declaring the object. Write a TypeScript function called isRecentBook that takes this book object as input and determines if the book was published in the last 5 years.
 
--   **Getting Started with React**
-    -   Introduction to React - Why React - Comparison with Vanilla JS
-    -   React Installation & Editor Setup with Vite
-    -   How React works - Virtual DOM
-    -   Basics of React Components
-    -   Basics of JSX: React's Markup
-    -   JavaScript in JSX
-    -   Passing Props to Components
-    -   Conditional Rendering
-    -   Rendering Lists
-    -   Pure Components
-    -   How to split larger components into smaller ones
--   **Adding Interactivity**
+Hints: Use getFullYear() method to extract the year to check the given year with current year.
 
-    -   Responding to Events - Event Handlers
-    -   Understanding States - React Component's Memory - useState
-    -   How State works in React
-    -   How Rendering works in React
-    -   Updating complex states immutably in React
+// Sample Input :
+const book1: Book = {
+    title: "Sample Book",
+    author: "John Doe",
+    publishedYear: 2022
+};
+isRecentBook(book1);
 
--   **React State Management Deep Dive**
+// Sample Output: 
+true
 
-    -   Declarative vs Imperative UI
-    -   Thinking UI Declaratively
-    -   Finding & Structuring React States
-    -   Connecting Event Handlers to React
-    -   Sharing State between components
-    -   Lifting State up
-    -   Extracting State Logic into Reducers
-    -   useReducer Hook
-    -   How to use Immer with React for concised immutable State Update
-    -   Passing Data Deeply inside React Components
-    -   Avoiding Prop Drilling - Context API & useContext Hook
-    -   Combine context and reducer to write scalable code
+# Problem 7:
+Create a TypeScript function logString that takes a parameter of type unknown and uses a type guard to check whether the parameter is of type string. If it is, log the string to the console. If it is not, log an error message.
 
-</details>
+// Sample Input 1: 
+logString("Hello, TypeScript!");
 
-<details>
-<summary>2. Advanced React</summary>
+// Sample Output 1:  
+"Hello, TypeScript!"
 
--   Referencing values with Refs - useRef hook
--   Manipulating the DOM with Refs
--   Synchronizing with Effects - useEffect hook
--   Separating events from Effects
--   Removing Effect Dependencies
--   Performance optimization with useCallback and useMemo hook
--   Reusing logic with Custom Hooks
--   Calling APIs from Back-end with React
+// Sample Input 2: 
+logString(42)
 
-</details>
+// Output: Error: 
+Input is not a string.
 
-<details>
-<summary>3. Advanced State Management</summary>
+# Problem 8:
+Design a TypeScript class Car that represents a basic car with properties for brand, model, and year. Implement a method displayInfo that displays information about the car.
 
--   [Using Redux / Toolkit](https://learnwithsumit.com/think-in-a-redux-way)
--   [Using Zustand](https://github.com/pmndrs/zustand)
--   [Using Jotai](https://jotai.org/)
--   [Using Recoil](https://recoiljs.org/)
--   [Using MobX](https://mobx.js.org/README.html)
+// Sample Input:
+new Car("Toyota", "Corolla", 2020);
 
-</details>
+// Sample Output: 
+"Your car model is:  2020 Toyota Corolla"
 
-<details>
-<summary>4. Styling Solutions</summary>
 
--   [**Tailwind**](https://tailwindcss.com/)
--   [**CSS Modules**](https://www.makeuseof.com/react-components-css-modules-style/)
--   [**Styled Components**](https://styled-components.com/)
--   React UI Component Library - [Shadcn](https://ui.shadcn.com/)
--   [React UI Component Library - Keep React](https://youtu.be/mVXNUMBtGEA)
--   [**Material UI**](https://mui.com/)
--   [**Chakra UI**](https://chakra-ui.com/)
--   [**Ant Design**](https://ant.design/docs/react/introduce)
 
-</details>
+Blog Writing (anyone):
+Write an impactful blog posts covering the following topics:
 
-<details>
-<summary>5. React Ecosystem & Use Cases</summary>
-
--   [React Router DOM](https://youtu.be/34tjWL9wi4g)
--   API Request with Axios in React
--   React Suspense & Error Boundaries
--   React Lazy Load
--   React Infinite Scroll
--   Uncommon React Hooks - useDebugValue, useDeferredValue, useId, useImperativeHandle, useInsertionEffect, useLayoutEffect and useTransition
--   **React Authentication**
-
-    -   How to handle user sign in (email, password, JWT)
-    -   How to handle access tokens and token refreshes
-    -   Social sign in (Google, Facebook, GitHub, etc.)
-    -   [Using Supabase](https://supabase.com/)
-    -   [Using Firebase](https://firebase.google.com/docs/auth)
-    -   [Using Clerk](https://clerk.com/)
-
--   **Form Handling in React**
-
-    -   How to validate user input in forms (emails, passwords, etc.)
-    -   How to send form data to server
-    -   How to handle file uploads
-    -   [Using React Hook Form](https://react-hook-form.com/)
-    -   [Using Formik](https://formik.org/docs/overview)
-
--   [**Accessibility**](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-    -   Understanding why accessibility is important
-    -   [Using semantic HTML](https://www.semrush.com/blog/semantic-html5-guide/)
-    -   How to implement keyboard navigation
-    -   How to add aria labels
-    -   [Using React Aria](https://react-spectrum.adobe.com/react-aria/)
--   **Testing**
-    -   [How to implement unit tests](https://www.freecodecamp.org/news/how-to-write-unit-tests-in-react/)
-        -   [Using React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-        -   [Using Jest](https://jestjs.io/)
-    -   [How to implement e2e integration tests](https://youtu.be/6BkcHAEWeTU)
-        -   [Using Cypress](https://www.cypress.io/)
-        -   [Using Playwright](https://playwright.dev/)
-
-</details>
-
-<details>
-<summary>6. React Frameworks</summary>
-
-You should have worked with **one of the following:**
-
--   [**Vite**](https://vitejs.dev/)
-    -   How to run a simple React application
--   [**Next.js**](https://nextjs.org/)
-    -   [Understanding file-based routing](https://nextjs.org/docs/app/building-your-application/routing)
-    -   [Understanding Next Auth](https://next-auth.js.org/)
-    -   [Understanding server components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
-    -   [Understanding server actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
--   [**Remix**](https://remix.run/)
-
-</details>
-
-<details>
-<summary>7. Beyond React</summary>
-
--   **Team player**
-    -   How to work within a team
-    -   How to perform code reviews
-    -   How to give and receive feedback
--   **Efficiency**
-    -   How to prioritise tasks
-    -   How to handle tech debt
-    -   How to meet deadlines and goals
--   **Continuous Learning**
-    -   How to continuously learn and grow
-    -   How to stay up to date with your skills
--   **Networking & Communication** - Going to meetups or events - Contributing to open source projects - Networking within the company you work in
-</details>
-
-## Resources from Learn with Sumit
-
-> Some free and paid resources from Learn with Sumit that might help you achieve your goal to become a React Developer
-
--   [Think in a React way: Free React Starter Course](https://www.youtube.com/watch?v=5Xy-t8k_M4A&list=PLHiZ4m8vCp9M6HVQv7a36cp8LKzyHIePr)
--   [JavaScript Beginners Course](https://www.youtube.com/watch?v=rePN-VFo1Eo&list=PLHiZ4m8vCp9OkrURufHpGUUTBjJhO9Ghy)
--   [DOM Course](https://www.youtube.com/watch?v=XY96d0vEdFk&list=PLHiZ4m8vCp9MJDxMOzhYVuTrO1b5n-Tq_)
--   [Think in a JavaScript way - Advanced Conceptual JavaScript Course](https://www.youtube.com/watch?v=KuhLGuNxF8U&list=PLHiZ4m8vCp9Nflbo9a0pZuLscG_Xc7DKq)
--   [Modern JavaScript Course](https://www.youtube.com/watch?v=PWXkYBmlbB4&list=PLHiZ4m8vCp9MFjMRp9EEHWKArbi0wdgXG)
--   [CSS Grid](https://www.youtube.com/watch?v=kEFIdXzQXYw)
--   [CSS Flexbox](https://www.youtube.com/watch?v=kRS5ficucNM)
--   [Tailwind CSS Course](https://www.youtube.com/watch?v=X7XbjwD6fVY&list=PLHiZ4m8vCp9P23SqlHL0QAqiwS_oCofV2)
--   [Reactive Accelerator: React-Next.js Course](https://learnwithsumit.com/rnext)
--   [Think in a Redux way - Redux paid course](https://learnwithsumit.com/think-in-a-redux-way)
+The significance of union and intersection types in Typescript.
+How to handle asynchronous operations using async/await over callback/promise TypeScript.
+Why are Type Guards Necessary? Discuss Various Types of Type Guards and Their Use Cases.
